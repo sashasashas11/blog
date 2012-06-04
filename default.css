@@ -170,13 +170,12 @@ a:hover {
 	background: #385B88;
 	color: #FFFFFF;
 }
-
-
-
-
-
 textarea { vertical-align:top; resize: none;}
 
-
+.footer {
+    
+    color: #000;
+    background: #DCDCDC;
+}
 
 
