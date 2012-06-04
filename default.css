@@ -1,0 +1,182 @@
+/*
+Design by Free CSS Templates
+http://www.freecsstemplates.org
+Released for free under a Creative Commons Attribution 2.5 License
+*/
+html,body { width:100%; height:100%; }
+* {
+	margin: auto;
+	padding: auto;
+}
+
+body {
+	background: #BCEE68;
+	font: normal small "Trebuchet MS", Tahoma, Helvetica, sans-serif;
+	color: #0000FF;
+}
+.wrapper {
+    
+     width:100%; height:100%;
+    
+}
+
+.header {  
+    
+                  border-radius: 100px;
+                        width:90%;
+/*                        height:18%; */
+			background: #B0E2FF no-repeat 0 15px;
+/*			position:relative; */
+/*                        margin-bottom:13px;*/
+}
+h1, h2, h3 {
+}
+h2 {text-align:center; 
+    font-style:normal;
+    font-family: Mistral, Gungsuh, MS Mincho, Georgia, 'Times New Roman', Times, serif; 
+    font-size:88px;
+}
+
+.content { 
+    margin: 10;
+    padding:7px 70px;
+    width: 85%;
+    height:85%;
+    background: #BCEE68;
+}
+.registr {
+    padding: 50px;
+     margin: 10;
+/*     padding:50px 30px;*/
+    float: left;
+    background: #B0E2FF; 
+/*    padding:7px 30px; */
+    width: 20%;
+}
+.registr_sabmit {
+    margin: 1;
+    padding: 1px;
+/*    background: #B3EE3A;*/
+    width: 70%;
+    height:20%;
+}
+.chat {
+    
+     padding: 50px;
+    float: left;
+/*    margin: -27% 27%;*/
+    background: #B3EE3A;
+/*    padding:7px 30px;*/
+    width: 50%;
+}
+.calendar {
+    width: 100%;
+     height:15%;
+    float: right;
+}
+.Post {
+    float: left;
+/*    height:150px;*/
+   width: 100%; 
+/*   background: #B0E2FF; */
+}
+.Status {
+ background: #B0E2FF;
+}
+h3 {
+}
+.timer {
+    float: left;
+    margin: 20;
+     width:10%; height:10%;
+}
+#time {
+    margin: auto;
+/*    width:100px; height:50px;*/
+/*    background: #B3EE3A;*/
+}
+p, blockquote, ul, ol {
+}
+
+p {
+}
+.login{
+    margin: 30px 30px 30px 4px;
+    
+}
+
+.articles {
+/*    margin: 5;*/
+ width:100%;
+ height:20%;
+ background: #B0E2FF; 
+}
+form   {
+    padding: 5px; 
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FF6600;
+}
+
+.table {
+    height:30px;
+    width: 60px;
+}
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+   }
+#login label {
+    
+	font-size: x-small;
+	font-weight: bold;
+}
+
+#login input {
+	margin-bottom: 5px;
+	padding: 2px 5px;
+	border: 11px solid #385B88;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+#inputtext1, #inputtext2 {
+    height:30px;
+    width: 150px;
+        background: #DCDCDC; 
+
+	color: #0000CD;
+}
+#inputtext3 {
+    float: right;
+/*    margin: 50;*/
+/*    overflow: hidden;*/
+}
+#inputtext4 {
+    color: crimson;
+    float: right;
+    margin: -15;
+}
+#inputsubmit1 {
+/*    margin: -5;*/
+	background: #385B88;
+	color: #FFFFFF;
+}
+#inputsubmit2 {
+    margin: -27 0 0 0;
+    float: right;
+/*    margin: 0 0 20px 0;*/
+	background: #385B88;
+	color: #FFFFFF;
+}
+
+
+
+
+
+textarea { vertical-align:top; resize: none;}
+
+
+
+
