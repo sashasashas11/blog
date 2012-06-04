@@ -46,7 +46,7 @@ h2 {text-align:center;
 }
 .registr {
     padding: 50px;
-     margin: 10;
+/*     margin: 10;*/
 /*     padding:50px 30px;*/
     float: left;
     background: #B0E2FF; 
@@ -68,6 +68,8 @@ h2 {text-align:center;
     background: #B3EE3A;
 /*    padding:7px 30px;*/
     width: 50%;
+        height:85%;
+
 }
 .calendar {
     width: 100%;
@@ -173,7 +175,7 @@ a:hover {
 textarea { vertical-align:top; resize: none;}
 
 .footer {
-    
+    margin: 5;
     color: #000;
     background: #DCDCDC;
 }

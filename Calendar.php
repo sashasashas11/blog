@@ -3,13 +3,23 @@
 include 'CalendarClass.php';
 
 session_start();
+           echo '<div class="header">';
 
-echo '<h1>Календарь</h1>';
+echo '<link href="default.css" rel="stylesheet" type="text/css" />';
+echo '<h2>Календарь</h2>';
+echo ' </div>';
+
+  echo ' <div class="content">';
+ echo '<div class="registr">';
 if (isset($_SESSION["login"]))
    
     echo "Hello, ".$_SESSION["login"]."!"."<br>";
 
 echo "<a href='index.php'>Главная страница</a>";
+echo ' </div>';
+
+  echo '<div class="chat"> ';
+
 if (!isset($_SESSION["Calendar"])) {
     $c = new Calendar();
     $c->setCalendar(date(Y));
@@ -37,10 +47,10 @@ if (isset($_GET['date'])) {
     echo $_SESSION['day'] . "." . $_SESSION['month'] . "." . $_SESSION['year'];
     echo '</td>';
     echo '<td>';
-    echo '<p>Добавить сообщение:   <input type="text" name="message" /></p>';
+    echo '<p>Добавить заметку:   <input type="text" name="message" /></p>';
     echo '</td>';
     echo '<td>';
-    echo '<p><input type="submit" value="Добавить"  /></p>';
+    echo '<p><input id="inputsubmit1" type="submit" value="Добавить"  /></p>';
     echo '</td>';
     echo '</form>';
     echo '</tr>';
@@ -57,5 +67,7 @@ if (isset($_POST['message'])) {
 if (isset($_GET['open'])) {
     include 'DBUse.php';
 }
+echo ' </div>';
+echo ' </div>';
 
 ?>

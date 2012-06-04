@@ -137,7 +137,7 @@ if (isset($_POST["message"])) {
                 </div> 
 <?php } ?>               	
             <div class="footer">
-               	<p>Блог Олександра Жицького</p>
+               	<p>Блог: Александра Жицкого</p>
 
             </div> 
         </div> 
