@@ -15,11 +15,11 @@ if (isset($_GET['del'])) {
 }
 if (isset($_GET['open'])) {
     
-    $result = DBHelper::getMessage($_SESSION['month']+1, $_SESSION['year']);
+    $result = DBHelper::getMessage($_SESSION['month'], $_SESSION['year']);
     
     echo '<table align ="center" border="1" cellpadding="5" cellspacing="5">';
     echo "<caption>";
-    echo "<h2> Все записи месяца </h2>";
+    echo "<h1> Все записи месяца </h1>";
     echo "</caption>";
     $_SESSION['month']=$_SESSION['month']+1;
     while ($mass = mysql_fetch_array($result)) {
@@ -40,7 +40,7 @@ if (isset($_GET['open'])) {
         }
         else {
      echo '<td>';
-        echo $mass["name"];
+        echo $mass["login"];
         echo '</td>';
  }
         if ($mass["login"]==$_SESSION["login"]){

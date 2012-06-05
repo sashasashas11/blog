@@ -23,8 +23,8 @@
    {
      // Если файл загружен успешно, перемещаем его
      // из временной директории в конечную
-        move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/localhost/www/Blog/images/" . $_FILES["filename"]["name"]);
-//     move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/sasha380/domains/sashasashas11.xres.org/public_html/file/".$_FILES["filename"]["name"]);
+//        move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/localhost/www/Blog/images/" . $_FILES["filename"]["name"]);
+     move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/sasha380/domains/sashasashas11.xres.org/public_html/file/".$_FILES["filename"]["name"]);
 //     echo '<a href="index.php"><img width="100" title="Изображение" alt="Текст" src="file/'.$_FILES["filename"]["name"].'" border="0"></a>'.'</br>';
     
     } else {

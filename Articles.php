@@ -1,7 +1,7 @@
 <?php
 session_start();
 include 'DBHelper.php';
-
+include 'addFile.php';
 DBHelper::createServerConnection();
 DBHelper::connectToDB();
 $current_time = date("H:i:s");
@@ -50,20 +50,8 @@ $current_date = date("Y.m.d");
                         
                     } 
                     else {
-                        if ($_FILES["filename"]["size"] > 1024 * 20 * 1024) {
-                            echo ("Размер файла превышает 20 мегабайта");
-                            exit;
-                        }
-                        //               Проверяем загружен ли файл
-                        if (is_uploaded_file($_FILES["filename"]["tmp_name"])) {
-                            /// Если файл загружен успешно, перемещаем его из временной директории в конечную
-                            move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/localhost/www/Blog/img/" . $_FILES["filename"]["name"]);
-                            $file = $_FILES["filename"]["name"];
-                            echo $file;
-                        } else {
-                            echo("Ошибка загрузки файла");
-                        }
-                        DBHelper::addArticl($_POST["title"], $file, $current_date, $_POST["description"], $_POST["text"], $_SESSION["login"], $_POST["myselect"]);
+                        Addfile(img);
+                        DBHelper::addArticl($_POST["title"], $_FILES["filename"]["name"], $current_date, $_POST["description"], $_POST["text"], $_SESSION["login"], $_POST["myselect"]);
                     }
                     ?>
                     </body>
