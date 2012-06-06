@@ -1,7 +1,8 @@
 <?php
-
-
-
+ if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
+                        // Если пусты, то мы не выводим ссылку
+                        echo "Вы вошли на сайт, как гость<br><a href='#'>Коментарии  доступна только зарегистрированным пользователям</a>";
+                    } else {
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -77,8 +78,8 @@
             ?>
 
         </table>
-
-<!--        }-->
-
+    <?php
+            }
+            ?>
     </body>
 </html>

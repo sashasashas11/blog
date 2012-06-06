@@ -46,7 +46,7 @@ if (isset($_POST["message"])) {
 
 
             </div> 
-            <div class="content">   
+    <div class="content">   
                 <div class="registr">
                     <h1 class="title">Client Account</h1>
                     <?php
@@ -90,17 +90,19 @@ if (isset($_GET['reg'])) {
                 </div>
                 <div class="chat"> 
                     <br>
-                    <?php
+                        <?php
                     if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
                         // Если пусты, то мы не выводим ссылку
-                        echo "Вы вошли на сайт, как гость<br><a href='#'>Эта ссылка  доступна только зарегистрированным пользователям</a>";
+                        echo "Вы вошли на сайт, как гость<br>";
                     } else {
                         ?>
                         <div class="calendar"> 
                             Вы вошли на сайт, как   <b>  <?php echo $_SESSION['login'] ?>  </b> 
                             <a   href='Calendar.php'><h1>Заметки календаря</h1></a> 
                         </div>
-                    <div class="FullPost"> 
+                     <?php   }?>
+                        
+                       <div class="FullPost"> 
  <?php
      
     if (isset($_GET['article'])) {
@@ -140,11 +142,14 @@ if (isset($_GET['reg'])) {
         }
     }
     ?>
-                        </div>
+                          </div>
 
-                    </div>
-                </div> 
-<?php } ?>               	
+                        
+                    
+                    
+                       </div>
+                    </div> 
+<?php //} ?>               	
             <div class="footer">
                	<p>Блог: Александра Жицкого</p>
 
