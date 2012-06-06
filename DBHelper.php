@@ -6,13 +6,13 @@ class DBHelper {
     private static $identifier_db;
 
     public static function createServerConnection() {
-          DBHelper::$connection_identifier = @mysql_connect("localhost", "sasha380_11", "B76R9312") or die("Could not connect to MySQL server!");
-//        DBHelper::$connection_identifier = @mysql_connect("localhost", "root", "") or die("Could not connect to MySQL server!");
+//          DBHelper::$connection_identifier = @mysql_connect("localhost", "sasha380_11", "B76R9312") or die("Could not connect to MySQL server!");
+        DBHelper::$connection_identifier = @mysql_connect("localhost", "root", "") or die("Could not connect to MySQL server!");
     }
 
     public static function connectToDB() {
-        DBHelper::$identifier_db = mysql_select_db("sasha380_12", DBHelper::$connection_identifier) or die("Could not select `calendar` database!");
-//        DBHelper::$identifier_db = mysql_select_db("blog1", DBHelper::$connection_identifier) or die("Could not select `calendar` database!");
+//        DBHelper::$identifier_db = mysql_select_db("sasha380_12", DBHelper::$connection_identifier) or die("Could not select `calendar` database!");
+        DBHelper::$identifier_db = mysql_select_db("blog1", DBHelper::$connection_identifier) or die("Could not select `calendar` database!");
     }
 
     public static function addRecord($year, $month, $day, $text, $user) {

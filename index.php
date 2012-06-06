@@ -27,6 +27,7 @@ if (isset($_POST["message"])) {
 }   
  }
 
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -52,12 +53,17 @@ if (isset($_POST["message"])) {
                     <?php
 if (isset($_GET['reg'])) {
    include 'reg.php';
+if (isset($_POST["password"])) {
+    include 'save_user.php'; 
+ }
+   
 }
+ 
  else {
     
 
                     ?>
-                    <form id="form1" action="testreg.php" method="post">
+                    <form id="form1"  method="post">
 
 
                         <p class="login">
@@ -75,15 +81,23 @@ if (isset($_GET['reg'])) {
                             <input id="inputsubmit1" type="submit" name="submit" value="Ввойти">
                             </form>
                             <?php
+                            if (isset($_POST["password"])) {
+                                 include 'testreg.php'; 
+                            }
                             if (empty($_SESSION['login']) or empty($_SESSION['id'])) {
                                 
                             } else {
                                 ?>
-                                <form id="form2" method="post" action="111.php">
+                                <form id="form2" method="post" action="index.php?exit1">
                                     <input id="inputsubmit2" type="submit" value="Выход">
                                 </form>
+                
 
-<?php } ?>
+<?php }
+if (isset($_GET['exit1'])) {
+     include 'exitUse.php';
+}
+?>
                             <a id="inputtext3" href="index.php?reg">Зарегистрироваться</a> 
                         </div>
  <?php      }?>
@@ -142,12 +156,8 @@ if (isset($_GET['reg'])) {
         }
     }
     ?>
-                          </div>
-
-                        
-                    
-                    
-                       </div>
+                          </div>        
+                      </div>
                     </div> 
 <?php //} ?>               	
             <div class="footer">

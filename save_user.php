@@ -1,20 +1,13 @@
 <?php
- include 'DBHelper.php';
- include 'addFile.php';
-    DBHelper::createServerConnection();
-    DBHelper::connectToDB();
-    if (isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} } //заносим введенный пользователем логин в переменную $login, если он пустой, то уничтожаем переменную
+   if (isset($_POST['login'])) { $login = $_POST['login']; if ($login == '') { unset($login);} } //заносим введенный пользователем логин в переменную $login, если он пустой, то уничтожаем переменную
     if (isset($_POST['password'])) { $password=$_POST['password']; if ($password =='') { unset($password);} }
     //заносим введенный пользователем пароль в переменную $password, если он пустой, то уничтожаем переменную
  if (empty($login) or empty($password)) //если пользователь не ввел логин или пароль, то выдаем ошибку и останавливаем скрипт
     {
-     echo '<a href="index.php?reg">Назад</a>';
-    exit ("Вы ввели не всю информацию, вернитесь назад и заполните все поля!");
-    
+     exit ("<b id='error'>Вы ввели не всю информацию, заполните все поля!</b>");
     }
     
     Addfile(images);
-
 
 //если логин и пароль введены,то обрабатываем их, чтобы теги и скрипты не работали, мало ли что люди могут ввести
     $login = stripslashes($login);
@@ -29,8 +22,8 @@
     $result = DBHelper::getUserLogin($login);
     $myrow = mysql_fetch_array($result);
     if (!empty($myrow['id'])) {
-        echo '<a href="index.php?reg">Назад</a>';
-    exit ("Извините, введённый вами логин уже зарегистрирован. Введите другой логин.");
+//    exit ("<b id='error'>Извините, введённый вами логин уже зарегистрирован. Введите другой логин.</b>");
+     exit ("<b id='error'> Неправильный логин. Введите другой логин.</b>");
      }
  // если такого нет, то сохраняем данные
     $avatar=$_FILES["filename"]["name"];

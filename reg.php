@@ -5,8 +5,8 @@
     </head>
     <body>
     <h3>Регистрация</h3>
-    <form action="save_user.php" method="post" enctype="multipart/form-data"> 
-    
+<!--    <form action="save_user.php" method="post" enctype="multipart/form-data"> -->
+    <form  method="post" enctype="multipart/form-data">
     <p>
     <label>Ваш логин:<br></label>
     <input id="inputtext2" name="login" type="text" size="15" maxlength="15">
