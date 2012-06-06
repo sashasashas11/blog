@@ -3,16 +3,18 @@
 
 
 ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <body>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <form  method="Post" enctype="multipart/form-data">
-            <h1 class="H1">Коментарии:</h1>
-            <p>Ввести сообщения:</br> 
-                <textarea name="message" placeholder="Коментарий..." rows="5" cols="40" > </textarea>
+            <h1 class="H1">РљРѕРјРµРЅС‚Р°СЂРёРё:</h1>
+            <p>Р’РІРµСЃС‚Рё СЃРѕРѕР±С‰РµРЅРёСЏ:</br> 
+                <textarea name="message" placeholder="РљРѕРјРµРЅС‚Р°СЂРёР№..." rows="5" cols="40" > </textarea>
 <!--        <input type="file" name="filename"><br> -->
 
             </p>
-            <input type="submit" value="Отправить"  /> 
+            <input type="submit" value="РћС‚РїСЂР°РІРёС‚СЊ"  /> 
             <input type="file" name="filename"><br> 
         </form>
 
@@ -43,7 +45,7 @@
                 <tr class="table">
                     <td>
 
-                        <?php echo '<img width="100" title="Изображение" alt="Текст" src="file/' . $row["avatar"] . '" border="0">';
+                        <?php echo '<img width="100" title="РР·РѕР±СЂР°Р¶РµРЅРёРµ" alt="РўРµРєСЃС‚" src="file/' . $row["avatar"] . '" border="0">';
                         ;
                         ?>
                     </td>

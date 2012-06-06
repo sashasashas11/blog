@@ -2,17 +2,17 @@
 
 function Addfile($directory) {
     if ($_FILES["filename"]["size"] > 1024 * 20 * 1024) {
-        echo ("Размер файла превышает 20 мегабайта");
+        echo ("Р Р°Р·РјРµСЂ С„Р°Р№Р»Р° РїСЂРµРІС‹С€Р°РµС‚ 20 РјРµРіР°Р±Р°Р№С‚Р°");
         exit;
     }
-    //               Проверяем загружен ли файл
+    //               РџСЂРѕРІРµСЂСЏРµРј Р·Р°РіСЂСѓР¶РµРЅ Р»Рё С„Р°Р№Р»
     if (is_uploaded_file($_FILES["filename"]["tmp_name"])) {
-        /// Если файл загружен успешно, перемещаем его из временной директории в конечную
+        /// Р•СЃР»Рё С„Р°Р№Р» Р·Р°РіСЂСѓР¶РµРЅ СѓСЃРїРµС€РЅРѕ, РїРµСЂРµРјРµС‰Р°РµРј РµРіРѕ РёР· РІСЂРµРјРµРЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё РІ РєРѕРЅРµС‡РЅСѓСЋ
         move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/sasha380/domains/sashasashas11.xres.org/public_html/".$directory."/" . $_FILES["filename"]["name"]);
 //        move_uploaded_file($_FILES["filename"]["tmp_name"], "/home/localhost/www/Blog/".$directory."/" . $_FILES["filename"]["name"]);
       echo  $file = $_FILES["filename"]["name"];
          } else {
-//        echo("Ошибка загрузки файла");
+//        echo("РћС€РёР±РєР° Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»Р°");
     }
 }
 

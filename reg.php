@@ -1,25 +1,26 @@
 <html>
     <head>
-    <title>Регистрация</title>
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Р РµРіРёСЃС‚СЂР°С†РёСЏ</title>
     </head>
     <body>
-    <h2>Регистрация</h2>
+    <h2>Р РµРіРёСЃС‚СЂР°С†РёСЏ</h2>
     <form action="save_user.php" method="post" enctype="multipart/form-data"> 
     
 <p>
-    <label>Ваш логин:<br></label>
+    <label>Р’Р°С€ Р»РѕРіРёРЅ:<br></label>
     <input name="login" type="text" size="15" maxlength="15">
     </p>
 
 <p>
-    <label>Ваш пароль:<br></label>
+    <label>Р’Р°С€ РїР°СЂРѕР»СЊ:<br></label>
     <input name="password" type="password" size="15" maxlength="15">
     </p>
-    <h2><p><b> Форма для загрузки файлов </b></p></h2>
+    <h2><p><b> Р¤РѕСЂРјР° РґР»СЏ Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»РѕРІ </b></p></h2>
     <input type="file" name="filename"><br> 
 
 <p>
-    <input type="submit" name="submit" value="Зарегистрироваться">
+    <input type="submit" name="submit" value="Р—Р°СЂРµРіРёСЃС‚СЂРёСЂРѕРІР°С‚СЊСЃСЏ">
 
 </p></form>
       

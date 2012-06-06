@@ -2,5 +2,5 @@
 session_start();
 $_SESSION["login"]=null;
 unset($_SESSION['login']);
-echo "<a href='index.php'>Главная страница</a>";
+echo "<a href='index.php'>Р“Р»Р°РІРЅР°СЏ СЃС‚СЂР°РЅРёС†Р°</a>";
 ?>

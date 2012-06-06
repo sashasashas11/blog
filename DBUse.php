@@ -19,7 +19,7 @@ if (isset($_GET['open'])) {
     
     echo '<table align ="center" border="1" cellpadding="5" cellspacing="5">';
     echo "<caption>";
-    echo "<h1> Все записи месяца </h1>";
+    echo "<h1> Р’СЃРµ Р·Р°РїРёСЃРё РјРµСЃСЏС†Р° </h1>";
     echo "</caption>";
     $_SESSION['month']=$_SESSION['month']+1;
     while ($mass = mysql_fetch_array($result)) {
