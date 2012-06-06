@@ -49,8 +49,14 @@ if (isset($_POST["message"])) {
             <div class="content">   
                 <div class="registr">
                     <h1 class="title">Client Account</h1>
+                    <?php
+if (isset($_GET['reg'])) {
+   include 'reg.php';
+}
+ else {
+    
 
-
+                    ?>
                     <form id="form1" action="testreg.php" method="post">
 
 
@@ -78,9 +84,9 @@ if (isset($_POST["message"])) {
                                 </form>
 
 <?php } ?>
-                            <a id="inputtext3" href="reg.php">Зарегистрироваться</a> 
+                            <a id="inputtext3" href="index.php?reg">Зарегистрироваться</a> 
                         </div>
-
+ <?php      }?>
                 </div>
                 <div class="chat"> 
                     <br>
